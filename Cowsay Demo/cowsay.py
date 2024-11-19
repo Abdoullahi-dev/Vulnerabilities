@@ -9,10 +9,10 @@ app = Flask(__name__)
 def home():
     output = ''
     try:
-        message = request.form.get('CowInput', 'You need to have a message, or the site freezes, it\'s kinda annoying.')
+        message = request.form.get('CowInput', 'Make the cow say whatever you want!')
         print(message)
         if message != '':
-            output = subprocess.check_output(f"cowsay {message}", shell=True).decode('utf8')
+            output = subprocess.check_output(f"cowsay \"\n{message}\n\"", shell=True).decode('utf8')
         print(output)
     except Exception as e:
         print(e)
