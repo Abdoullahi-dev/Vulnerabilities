@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cowsay</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to the Command Injection Demo</h1>
+        <form action="/" method="post">
+
+            <label for="CowInput">Text for cowsay:</label>
+            <input name="CowInput" id="CowInput" required>
+            <button>Send text to Cowsay</button>
+
+            <pre>{{ cowsay_message }}</pre>
+        </form>
+    </div>
+</body>
+
+</html>
