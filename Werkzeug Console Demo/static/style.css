@@ -1,0 +1,97 @@
+/* Console */
+body {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    margin: 0;
+    padding: 20px;
+}
+
+.console-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #252526;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.console-header {
+    background-color: #323233;
+    padding: 10px 20px;
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1px solid #3e3e42;
+}
+
+.console-output {
+    padding: 20px;
+    min-height: 200px;
+    max-height: 400px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+}
+
+.console-input {
+    display: flex;
+    padding: 20px;
+    border-top: 1px solid #3e3e42;
+}
+
+textarea {
+    flex: 1;
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    border: 1px solid #3e3e42;
+    border-radius: 4px;
+    padding: 10px;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    background-color: #0e639c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    height: fit-content;
+}
+
+button:hover {
+    background-color: #1177bb;
+}
+
+.error {
+    color: #f48771;
+}
+
+.output {
+    color: #89d185;
+}
+
+/* Access Console */
+.login-container {
+    background: #252526;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+input {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    border: 1px solid #3e3e42;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    width: 200px;
+}
+button {
+    background: #0e639c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+}
