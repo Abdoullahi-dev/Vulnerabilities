@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Werkzeug Console Demo</title>
+    <script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Werkzueg Console</h2>
+        <a href="/console">
+            <button>Access Console</button>
+        </a>
+        <p id="error" class="error"></p>
+    </div>
+
+    <script>
+        document.body.addEventListener('htmx:afterRequest', function(evt) {
+            if (evt.detail.xhr.status === 403) {
+                console.log('403 error occurred.');
+                document.getElementById('error').innerHTML = 'Invalid PIN.';
+                return;
+            }
+        });
+    </script>
+</body>
+</html>
