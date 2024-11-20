@@ -25,10 +25,6 @@ def check_pin(f):
 def index():
     return render_template('index.html', pin_hash=get_pin_hash())
 
-@app.route('/console2')
-def console():
-    return render_template('console.html')
-
 if __name__ == '__main__':
     if not os.environ.get('WERKZEUG_DEBUG_PIN'):
         os.environ['WERKZEUG_DEBUG_PIN'] = '1234'
