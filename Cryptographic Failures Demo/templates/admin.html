@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptographic Failure Demo | Admin Dashboard</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Admin Dashboard</h1>
+        <p class="auth-header">Login as Admin to view the Admin Dashboard.</p>
+        <div class="user-grid">
+            <div class="user-cards">
+                {% for user in users %}
+                <div class="user-card">
+                    <h2>{{ user.username }}</h2>
+                    <div class="user-info">
+                        <span>User ID: {{ user.id }}</span>
+                    </div>
+                    <div class="user-info">
+                        <span>Username: {{ user.username }}</span>
+                    </div>
+                    <div class="sensitive-info">
+                        <span>Password: {{ user.password }}</span>
+                    </div>
+                    <div class="button-group">
+                        <button type="button">Edit</button>
+                        <button type="button">Delete</button>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>  
+</body>
+</html>
+</html>
