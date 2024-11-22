@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="reset-container">
+        <h1>Forgot Password</h1>
+        <form action="/forgot-password" method="POST">
+            <input type="text" name="username" placeholder="Enter your username" required>
+
+            <select name="question" required>
+                <option value="">Select a Security Question</option>
+                {% for question, _ in questions %}
+                    <option value="{{ question }}">{{ question }}</option>
+                {% endfor %}
+            </select>
+
+            <input type="text" name="answer" placeholder="Answer the question" required>
+            <button type="submit" class="reset-button">Reset</button>
+        </form>
+
+        {% if password %}
+            <div class="password-display">
+                <h2>Your password is: {{ password }}</h2>
+            </div>
+        {% endif %}
+
+        <a href="/">Back to Login</a>
+    </div>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <ul class="flashes">
+            {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
+</body>
+</html>

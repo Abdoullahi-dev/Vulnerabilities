@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        
+        .notepad {
+            background-color: #f4f4f4;
+            border: 2px solid #ccc;
+            padding: 10px;
+            width: 300px;
+            margin: 20px 0;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+        }
+
+        .notepad-content {
+            display: none;
+            background-color: #fff;
+            border-top: 2px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .notepad:hover {
+            background-color: #eaeaea;
+        }
+    </style>
+</head>
+<body>
+    <div class="home-container">
+        <h1>Welcome, {{ username }}!</h1>
+        <p>You've successfully logged in.</p>
+        <a href="/">Log Out</a>
+
+        
+        <div class="notepad" onclick="toggleNotepad()">Sensitive Information about John</div>
+        <div class="notepad-content" id="notepadContent">
+            <p><strong>Note:</strong> I love sneaking into the fridge at 4am every night to eat cheese.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleNotepad() {
+            var content = document.getElementById("notepadContent");
+          
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
