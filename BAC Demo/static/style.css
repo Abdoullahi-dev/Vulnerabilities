@@ -68,6 +68,10 @@ button:hover {
     background-color: #098839;
 }
 
+input{
+    color: #ebcaf6;
+}
+
 a {
     color: #5bdd61;
     text-decoration: none;

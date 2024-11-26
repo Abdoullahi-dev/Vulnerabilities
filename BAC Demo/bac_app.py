@@ -4,10 +4,10 @@ app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Required for session management
 
 accounts = [
-    {"id": 0, "username": "admin", "password": "admin", "note": "Flag: abCD12#$."},
-    {"id": 1, "username": "user1", "password": "pass1", "note": "This is user1's note."},
-    {"id": 2, "username": "user2", "password": "pass2", "note": "This is user2's note."},
-    {"id": 3, "username": "user3", "password": "pass3", "note": "This is user3's note."},
+    {"id": 0, "username": "admin", "password": "admin", "note": "I am a professional kazoo player."},
+    {"id": 1, "username": "user1", "password": "pass1", "note": "I sleep with a night light."},
+    {"id": 2, "username": "user2", "password": "pass2", "note": "I hoard electronics."},
+    {"id": 3, "username": "user3", "password": "pass3", "note": "I hate milk."},
 ]
 
 @app.route('/')
