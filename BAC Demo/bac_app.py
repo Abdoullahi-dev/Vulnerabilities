@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template, redirect, url_for, session, flash
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # Required for session management
+app.secret_key = 'your_secret_key'
 
 accounts = [
     {"id": 0, "username": "admin", "password": "admin", "note": "I am a professional kazoo player."},
