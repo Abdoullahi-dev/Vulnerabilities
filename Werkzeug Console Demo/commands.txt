@@ -1,0 +1,11 @@
+### Linux Commands ###
+-----------------------------------------------------------------------------
+import os; print(os.popen("ls -l").read())
+import os; print(os.popen("cat app.py").read())
+
+
+### Powershell Commands ###
+-----------------------------------------------------------------------------
+import os; print(os.popen("dir").read())
+import os; print(os.popen("type app.py").read())
+import os; print(os.popen("copy webapp.db C:\\Users\\lofia\\Desktop").read())
