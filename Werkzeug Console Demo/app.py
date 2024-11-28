@@ -9,8 +9,11 @@ from dotenv import load_dotenv, find_dotenv
 
 load_dotenv(find_dotenv())
 
+secrete_key = "TKM{You_are_not_allowed_to_see_this}"
+
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(32)
+app.debug = True
 
 def get_pin_hash():
     pin = os.environ.get("CONSOLE_PIN", "1234")

@@ -1,0 +1,1 @@
+Flask run --debug
